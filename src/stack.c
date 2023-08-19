@@ -88,7 +88,7 @@ void stack_flush(stack_t *stack) {
     (*stack)->top = NULL;
 }
 
-int stack_size(stack_t *stack) {
+uint32_t stack_size(stack_t *stack) {
     return (*stack)->length;
 }
 

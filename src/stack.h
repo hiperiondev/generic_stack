@@ -31,6 +31,7 @@
 #ifndef STACK_H_
 #define STACK_H_
 
+#include <stdint.h>
 #include <stdbool.h>
 
 typedef struct stack_node_s {
@@ -40,7 +41,7 @@ typedef struct stack_node_s {
 
 typedef struct stack_s {
     stack_node_t *top; //
-    int length;        //
+    uint32_t length;   //
 } *stack_t;
 
 stack_t stack_create(void);
@@ -49,7 +50,7 @@ void stack_release(stack_t *stack);
 void stack_push(stack_t *stack, void *data);
 void* stack_pop(stack_t *stack);
 void stack_flush(stack_t *stack);
-int stack_size(stack_t *stack);
+uint32_t stack_size(stack_t *stack);
 void* stack_top(stack_t *stack);
 void* stack_next(stack_t *stack);
 bool stack_isempty(stack_t *stack);
