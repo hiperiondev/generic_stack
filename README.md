@@ -1,2 +1,2 @@
 # generic_stack
-Generic Stack
+Generic stack
